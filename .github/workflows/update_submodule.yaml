@@ -50,7 +50,7 @@ jobs:
           git commit -am "更新 Magisk ${{ needs.get_version.outputs.magisk_ver }} (${{ needs.get_version.outputs.magisk_ver_code }}) " || echo "无需更新 Magisk"
           git push origin main
   
-  liuqin:
+  taro:
     runs-on: ubuntu-latest
     needs: get_version
     steps:
@@ -58,17 +58,17 @@ jobs:
         run: |
           git config --global user.email "30484319+zjw2017@users.noreply.github.com"
           git config --global user.name "柚稚"
-      - name: 拉取 action_build_liuqin_system
+      - name: 拉取 action_build_taro_system
         uses: actions/checkout@v4.2.2
         with:
-          repository: Human-Machine-Matrix/action_build_liuqin_system
+          repository: Human-Machine-Matrix/action_build_taro_system
           token: ${{ secrets.GH_TOKEN }}
-          path: action_build_liuqin_system
+          path: action_build_taro_system
           submodules: recursive
           fetch-depth: 0
-      - name: 提交 action_build_liuqin_system
+      - name: 提交 action_build_taro_system
         run: |
-          cd action_build_liuqin_system
+          cd action_build_taro_system
           git submodule update --remote --merge
           git commit -am "更新 Magisk ${{ needs.get_version.outputs.magisk_ver }} (${{ needs.get_version.outputs.magisk_ver_code }}) " || echo "无需更新 Magisk"
           git push origin main
@@ -92,29 +92,6 @@ jobs:
       - name: 提交 action_build_kalama_system
         run: |
           cd action_build_kalama_system
-          git submodule update --remote --merge
-          git commit -am "更新 Magisk ${{ needs.get_version.outputs.magisk_ver }} (${{ needs.get_version.outputs.magisk_ver_code }}) " || echo "无需更新 Magisk"
-          git push origin main
-
-  diting:
-    runs-on: ubuntu-latest
-    needs: get_version
-    steps:
-      - name: 设置 Git 提交账户
-        run: |
-          git config --global user.email "30484319+zjw2017@users.noreply.github.com"
-          git config --global user.name "柚稚"
-      - name: 拉取 action_build_diting_system
-        uses: actions/checkout@v4.2.2
-        with:
-          repository: Human-Machine-Matrix/action_build_diting_system
-          token: ${{ secrets.GH_TOKEN }}
-          path: action_build_diting_system
-          submodules: recursive
-          fetch-depth: 0
-      - name: 提交 action_build_diting_system
-        run: |
-          cd action_build_diting_system
           git submodule update --remote --merge
           git commit -am "更新 Magisk ${{ needs.get_version.outputs.magisk_ver }} (${{ needs.get_version.outputs.magisk_ver_code }}) " || echo "无需更新 Magisk"
           git push origin main
