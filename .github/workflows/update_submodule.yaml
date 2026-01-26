@@ -16,7 +16,7 @@ jobs:
       magisk_ver_code: ${{ steps.get_magisk_version.outputs.magisk_ver_code }}
     steps:
       - name: 拉取 Magisk-Patch
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.2
       - name: 获取 Magisk 版本信息
         id: get_magisk_version
         run: |
@@ -32,7 +32,7 @@ jobs:
     outputs:
       message: ${{ steps.getmsg.outputs.message }}
     steps:
-      - uses: actions/checkout@v5.0.0
+      - uses: actions/checkout@v6.0.2
         with:
           fetch-depth: 1
 
@@ -53,7 +53,7 @@ jobs:
           git config --global user.email "30484319+zjw2017@users.noreply.github.com"
           git config --global user.name "柚稚"
       - name: 拉取 action_build_lahaina_system
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.2
         with:
           repository: Human-Machine-Matrix/action_build_lahaina_system
           token: ${{ secrets.GH_TOKEN }}
@@ -76,7 +76,7 @@ jobs:
           git config --global user.email "30484319+zjw2017@users.noreply.github.com"
           git config --global user.name "柚稚"
       - name: 拉取 action_build_taro_system
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.2
         with:
           repository: Human-Machine-Matrix/action_build_taro_system
           token: ${{ secrets.GH_TOKEN }}
@@ -99,7 +99,7 @@ jobs:
           git config --global user.email "30484319+zjw2017@users.noreply.github.com"
           git config --global user.name "柚稚"
       - name: 拉取 action_build_kalama_system
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.2
         with:
           repository: Human-Machine-Matrix/action_build_kalama_system
           token: ${{ secrets.GH_TOKEN }}
@@ -122,7 +122,7 @@ jobs:
           git config --global user.email "30484319+zjw2017@users.noreply.github.com"
           git config --global user.name "柚稚"
       - name: 拉取 PayloadToFlash
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.2
         with:
           repository: Human-Machine-Matrix/PayloadToFlash
           token: ${{ secrets.GH_TOKEN }}
@@ -145,7 +145,7 @@ jobs:
           git config --global user.email "30484319+zjw2017@users.noreply.github.com"
           git config --global user.name "柚稚"
       - name: 拉取 action_build_rubens_system
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.2
         with:
           repository: Human-Machine-Matrix/action_build_rubens_system
           token: ${{ secrets.GH_TOKEN }}
