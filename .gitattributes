@@ -1,0 +1,14 @@
+# Text files
+*.sh   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Binary files
+*.apk  binary
+*.zip  binary
+
+# ELF binaries
+magisk_patch/magisk      binary
+magisk_patch/magiskboot  binary
+magisk_patch/magiskinit  binary
+magisk_patch/init-ld     binary
